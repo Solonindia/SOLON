@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGR Report</title>
+    <style>
+        .three{
+            font-size: xx-large;
+            text-align: left;
+        }
+       .logo {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            margin-right: 5px; /* Adjust this value as needed */
+            text-align: right;
+                }
+
+        th, td {
+            border: 1px solid rgb(2, 35, 66);
+            font-size: 11px; /* Adjust font size */
+            white-space: nowrap; /* Prevent text from wrapping */
+        }
+
+        .t1 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        @media print { 
+            .second,.third{
+                page-break-before: always;
+            }
+            header,footer,.h,.f,.ff,.hh{
+                background-color: #03254b; 
+                padding: 0px;
+            }
+            header img {
+                width: 100px; 
+                height:48px; 
+            }
+            footer img {
+                width: 100px; 
+                height:48px; 
+            }
+            .f img,.h img,.hh img,.ff img{                
+                width: 100px; 
+                height:48px; 
+            }
+            .content {
+               
+                position: relative;
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .content img {
+                width: 720px;
+                height: 400px;
+            }
+            .text-overlay {
+                border: 2px solid rgb(4, 67, 87);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: rgb(6, 3, 23);
+                font-size: large;
+            } 
+            h1, h3, h4 {
+            line-height:48%; 
+            font-size:x-large;
+            }
+            #cont{
+                line-height:100%; 
+                font-size:x-large; 
+            }
+            .center-table {
+                page-break-before: always; /* Insert page break before printing this table */
+                display: block;
+                text-align: center;
+                line-height: 200%;
+                padding-top: 2px;
+                max-width: 50%; 
+                margin: auto; 
+            }
+            .center-table1 {
+                text-align: center;
+                padding-top: 2px;
+            }
+            .center-table2 {
+                margin-top: 50px;
+                display: block;
+                text-align: center;
+                padding-top: 2px;
+                font-size:x-large;
+            }    
+        }   
+    </style>
+</head>
+<body>
+    <div>
+    <header>
+    <img src="static/Images/logo.jpg" alt="Header Image">
+    </header>
+    <div class="content">
+        <img src="static/Images/solar.jpg" alt="Middle Image">
+        <br><div class="text-overlay">
+        <h1><br>Annual Plant Performance Report <br><br>
+           FY-2022-23<br><br>
+           For<br><br>
+           CapSol Energy Private Limited <br><br>
+           11.96MWp GMFT Solar PV Power Plant,<br><br>
+           Madurai, Tamilnadu-625703 <br><br>
+        </div>
+    </div><br><br>
+    <div style="text-align: center;font-size: xx-large;">
+        <h1>Submitted By <br><br>
+            SOLON India Private Limited <br><br>
+            Hyderabad-500055</h1>
+        <h3>Date of Submission: 31.05.2022</h3>
+    </div>
+    <br><br><br><br>
+    </div>
+    <footer>
+        <img src="static/Images/logo.jpg" alt="Footer Image">
+    </footer>
+    <div class="second">
+        <br><br>
+    <div class="h">
+    <img src="static/Images/logo.jpg" alt="Header Image">
+    </div>
+    <br><br><br>
+    <div style="text-align: center;">
+        <h1 style="color:rgb(3, 3, 48);font-size:200%;"><ul>Table of Contents</ul></h1>
+        <h3>1. Plant General Information.................................................................................................................3</h3><br>
+        <h3><b>2. Energy Generation Details................................................................................................................3</b></h3>
+        <h4>&nbsp;&nbsp;&nbsp;2.1. Energy Generation by Inverter.....................................................................................................3</h4>
+        <h4>&nbsp;&nbsp;2.2. Energy Exported to Grid...............................................................................................................3</h4>
+        <h4>&nbsp;&nbsp;&nbsp;2.3. Energy Imported from Grid ......................................................................................................... 3</h4>
+        <h4>&nbsp;&nbsp;&nbsp;2.4. Irradiation POAI ............................................................................................................................ 3</h4>
+        <h4>&nbsp;2.5. Inverter Energy Vs. Insolation .................................................................................................... 3</h4><br>
+        <h3>3.Performance Analysis........................................................................................................................... 5</h3>
+        <h4>&nbsp;&nbsp;3.1. Simulated Performance Ratio .................................................................................................... 5</h4>
+        <h4>&nbsp;&nbsp;3.2. Actual Performance Ratio........................................................................................................... 5</h4>
+        <h4>&nbsp;&nbsp;3.3. Contractual Performance Ratio.................................................................................................. 5</h4>
+        <h4>&nbsp;&nbsp;&nbsp;&nbsp;3.4. PLF ................................................................................................................................................. 5</h4>
+        <h4>&nbsp;&nbsp;&nbsp;&nbsp;3.5. Grid Availability ............................................................................................................................. 5</h4>
+        <h4>&nbsp;&nbsp;3.6. Plant Availability ........................................................................................................................... 5</h4><br>
+        <h3>4.Plant Breakdown and Downtime.........................................................................................................6</h3>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+    <div class="f">
+    <img src="static/Images/logo.jpg" alt="Footer Image">
+    </div> 
+</div> 
+<div class="third"> 
+    <br><br>   
+<div class="hh">
+    <img src="static/Images/logo.jpg" alt="Header Image">
+</div>
+  <br><br>
+    <h3><b>1. Plant General Information</b></h3>
+       <div id="cont"> The Solar Power plant is situated in Modagam Village, Peraiyur Taluk, Madurai District,<br>
+        Tamilnadu. This power plant was commissioned on 26.06.2019 and connected to<br>
+        Kallupatti 110/33kV Substation which is around 9 km away from Plant.<br>
+        There are a total of 36,600 No’s Multi-crystalline SPV Module, 915MMS Table, 78 No’s SMB,<br>
+        6 No’s Inverters, and 2 No’s Inverter Duty Transformers installed at Site.
+    </div>
+</div>
+</div>
+<br><br><br>
+<div style="text-align: center;">
+<img src="static/Images/topv.jpg"/>
+</div>
+<h5 style="text-align: center;">Figure 1. Plant View</h5>
+<br>
+<div style="text-align: left;">
+<div style="color:rgb(3, 3, 54);font-size: xx-large;">2. Energy Generation Details</div>
+<div style="font-size: x-large;">The below table contains following information</div>
+<div style="color:darkcyan;font-size: xx-large;">
+2.1. Energy Generation by Inverter<br>
+2.2. Energy Exported to Grid<br>
+2.3. Energy Imported from Grid<br>
+2.4. Irradiation POAI<br>
+2.5. Inverter Energy Vs. Insolation<br>
+</div>
+</div>
+<br><br><br><br><br><br>
+<div class="ff">
+<img src="static/Images/logo.jpg" alt="Footer Image">
+</div>
+</div>  
+    <div class="center-table">
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Month</th>
+                    <th>Inverter <br>
+                        Energy<br>
+                        Generation<br>
+                        (in kWh)</th>
+                    <th>Energy<br>
+                        Export_ABT<br>
+                        Meter<br>
+                        (in kWh)</th>
+                    <th>Energy<br>
+                        Import_ABT<br>
+                        Meter<br>
+                        (in kWh)</th>
+                    <th>Net Export to<br>
+                        Grid<br>
+                        (In kWh)</th>
+                    <th>Insolation,<br>
+                        POAI<br>
+                        (in kWh/m2)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for input_value, number,Exp, Imp, number_12, number_6 in input_and_numbers %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td> <!-- Serial number -->
+                        <td>{{ input_value }}</td>
+                        <td>{{ number }}</td> <!-- Number value -->
+                        <td>{{ Exp }}</td>
+                        <td>{{ Imp }}</td>
+                        <td>{{ number_12 }}</td>
+                        <td>{{ number_6 }}</td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td colspan="2" align="right"><strong>Total</strong></td>
+                    <td><b>{{ total_sum }}</b></td>
+                    <td><b>{{ total_Exp }}</b></td>
+                    <td><b>{{ total_Imp }}</b></td>
+                    <td><b>{{ total_Grid }}</b></td>
+                    <td><b>{{ total_POAI }}</b></td>
+                </tr>
+            </tbody>
+        </table>
+    </div> 
+    <h1 style="text-align: center;margin-top: 10px; font-size:xx-large;">Inverter Energy Vs Insolation Trend</h1>      
+    <div style="border: 1px solid black; text-align: center;">
+        <div style="position: relative;">
+            <img src="data:image/png;base64,{{ graph }}" />
+            <div style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); background-color: #faf8f8; padding: 10px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <h2 style="color:#040464; margin-right: 20px; display: inline-block;">INV generation in kWh</h2>
+                <h2 style="color: rgb(221, 30, 5); display: inline-block;">Insolation in (kWh/m2)</h2>
+            </div>            
+        </div>
+    </div>    
+  <br>
+   <div class="hh">
+        <img src="static/Images/logo.jpg" alt="Header Image">
+    </div><br>
+  <div class="t1">
+        <div class="table1" style="margin-top: 50px; font-size: x-large;">
+        <h1 style="color: rgb(7, 4, 53);">3. Performance Analysis</h1>
+        <h1>Below Table contains following information:</h1>
+       <h2 style="color: dodgerblue; font-size: x-large;">3.1. Simulated Performance Ratio<br>
+           3.2. Actual Performance Ratio<br>
+           3.3. Contractual Performance Ratio<br>
+           3.4. PLF<br>
+           3.5. Grid Availability<br>
+           3.6. Plant Availability</h2>
+    </div>
+   
+    <div class="center-table1">
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Month</th>
+                    <th>Simulated<br>
+                        PR%<br></th>
+                    <th>Actual<br>
+                        PR%<br></th>
+                    <th>Corrected<br>
+                        PR%<br></th>
+                    <th>PLF<br>
+                        %<br></th>
+                    <th>Grid<br>
+                        Availability<br>
+                        %</th>
+                    <th>Plant <br>
+                    Availability <br>
+                    %</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for input_value,spr,pra,prc,plf,pa,ga in input_and_numbers1 %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td> <!-- Serial number -->
+                        <td>{{ input_value }}</td> <!-- Input value -->
+                        <td>{{ spr }}</td>
+                        <td>{{ pra }}</td>
+                        <td>{{ prc }}</td>
+                        <td>{{ plf }}</td>
+                        <td>{{ ga }}</td>
+                        <td>{{ pa }}</td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td colspan="2" align="right"><strong> Avg. Total</strong></td>
+                    <td><b>{{ avg_spr }}</b></td>
+                    <td><b>{{ avg_pra }}</b></td>
+                    <td><b>{{ avg_prc }}</b></td>
+                    <td><b>{{ avg_plf }}</b></td>
+                    <td><b>{{ avg_ga }}</b></td>
+                    <td><b>{{ avg_pa }}</b></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <div style="text-align:left">
+            <h2 style="color: rgb(185, 80, 9);font-size:x-large;"><b>Note:</b><br>
+                As per Amended O&M Contract Dated: 07.08.2020<br>
+                Annexure-B, the contractual Plant Availability should be > 99.5% and,<br>
+                Annexure-C, the Contractual Performance Ratio should be > 78.5%</h2>
+            <h1 style="color: rgb(2, 6, 63); font-size:x-large;">Reason for Less Plant Availability:</h2>
+            <p style="color: rgb(9, 40, 75); font-size:x-large;">we had a breakdown in inverter No-02, ISU-1 LCL Capacitor
+                bank and ISU-02 IGBT Module Failure on 11th Aug-2022, due to unavailability of these spare at
+                ABB factory warehouse it took more time to get it deliver to site. We received the materials at site 
+                on 9th Sept-2022. During these period inverters was running at 55% Load. As per ABB IGBT 
+                Module delivery got delay due to shortage of semi-conductors worldwide. In our spare list also, 
+                these spares are not available.</p>
+        </div>
+    </div><br><br><br>
+    <div class="ff">
+        <img src="static/Images/logo.jpg" alt="Footer Image">
+    </div>
+</div>
+       
+    <br><br>
+    <div class="hh">
+        <img src="static/Images/logo.jpg" alt="Header Image">
+    </div>
+    
+    <br><br><br>
+    <div class="center-table2">
+        <h1 style="color:rgb(3, 3, 36);font-size: xx-large;text-align: left;"><b>4. Plant Breakdown and Downtime</b></h1>
+        <h2 style="font-size: xx-large;text-align: left;">For the Period from 01.04.2022 to 31.03.2023</h2>
+        <!-- <h1>Table 3</h1> -->
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Breakdown Type</th>
+                    <th>Breakdown<br>
+                        in Hours<br></th>
+                    <th>Generation Loss<br>
+                        in MWh<br></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                    <tr>
+                        <td><b>A.</b></td> 
+                        <td><b>Controllable Events</b></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>String Breakdown</td>
+                        <td>{{ total_string }}</td>
+                        <td>{{ total_loss_string }}</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>SMB Breakdown</td>
+                        <td>{{ total_smb }}</td>
+                        <td>{{ total_loss_smb }}</td>
+
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Inverter Breakdown</td>
+                        <td>{{ total_inv }}</td>
+                        <td>{{ total_loss_inv }}</td>
+
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Transformer Breakdown</td>
+                        <td>{{ total_tranformer }}</td>
+                        <td>{{ total_loss_tranformer }}</td>
+
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Others Breakdown</td>
+                        <td>{{ total_others }}</td>
+                        <td>{{ total_loss_others }}</td>
+
+                    </tr>
+                    <tr>
+                        <td><b>B.</b></td>
+                        <td><b>NON - Controllable Events</b></td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>Curtailment Breakdown</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Grid Breakdown</td>
+                        <td>{{ total_grid }}</td>
+                        <td>{{ total_loss_grid }}</td>
+
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Force Majeure*</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                    </tr>                    
+            </tbody>
+        </table><br>
+        <h1 style="color:rgb(199, 4, 4);">* * * * * * *</h1> 
+    </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="ff">
+            <img src="static/Images/logo.jpg" alt="Footer Image">
+        </div>
+   
+   
+</body>
+</html>
