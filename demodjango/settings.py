@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'demoapp',
 ]
 
-
 WKHTMLTOPDF_CMD = '/path/to/wkhtmltopdf'
 
 
