@@ -76,7 +76,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'demodjango.wsgi.application'
 CSRF_TRUSTED_ORIGINS = [
-    'https://dgr.azurewebsites.net/home/',  # Add your production domain
+    'https://dgrapp-prod.azurewebsites.net/home/',  # Add your production domain
 ]
 
 
