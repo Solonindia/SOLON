@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - dgrapp-prod
+name: Build and deploy Python app to Azure Web App - SOLON
 
 on:
   push:
@@ -65,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F55D458C0ADD4D4C85BACBD3E6FBE10E }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_68B306FA94ED48D09C950A6EDCB3B88E }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_A81F588568B146E6BFB3EC98238C89E8 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_21189946BDA743AA984F60BE4CBBE9F9 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_E90E599499674B17BFDF8AE1CC43CE3C }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_6F1580B61304437C9C1350403CA7652C }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'dgrapp-prod'
+          app-name: 'SOLON'
           slot-name: 'Production'
           
