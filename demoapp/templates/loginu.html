@@ -98,7 +98,7 @@
         <img src="/static/Images/logo.jpg" alt="Footer Image">
     </div>
     <div class="signup-container">
-        <form method="post">
+        <form method="post" action="{% url 'user' %}">
             {% csrf_token %}
             {{ form.as_p }}
             {{error_message}}
