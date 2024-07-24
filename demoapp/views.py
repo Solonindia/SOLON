@@ -44,7 +44,6 @@ def login1_view(request):
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
             if username == VALID_USERNAME and password == VALID_PASSWORD:
-                # Redirect to the main page or a protected page
                 return redirect('admin')  # Make sure 'admin_services' matches your URL name
             else:
                 # Add an error message to be displayed on the frontend
@@ -288,7 +287,7 @@ def add_page_number(paragraph):
     run._r.append(fldChar1)
     run._r.append(instrText)
     run._r.append(fldChar2)
-@login_required
+
 def generate_word(request):
     if request.method == 'POST':
         try:
