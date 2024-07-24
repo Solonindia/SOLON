@@ -603,7 +603,7 @@ def generate_word(request):
                 style='BodyText'
             )
 
-            image_path2 = r'static\Images\topv.jpg'
+            image_path2 = r'static/Images/topv.jpg'
             doc.add_picture(image_path2, width=Inches(6.0), height=Inches(3.0))
             doc.add_paragraph("Figure 1. Plant View", style='BodyText').alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
 
