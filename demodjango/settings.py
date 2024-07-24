@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 ]
 
 WKHTMLTOPDF_CMD = '/path/to/wkhtmltopdf'
+CSRF_TRUSTED_ORIGINS = ['https://dgrapp-prod.azurewebsites.net']
 
 
 MIDDLEWARE = [

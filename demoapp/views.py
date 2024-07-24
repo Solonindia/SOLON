@@ -5,6 +5,7 @@ from .forms import LoginForm,SignUpForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib import messages
+from django.views.decorators.csrf import csrf_protect
 
 # Create your views here.
 def home_page(request):
@@ -13,6 +14,7 @@ def home_page(request):
 def redirect_to_home(request):
     return redirect('home') 
 
+@csrf_protect
 def login_view(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
@@ -34,6 +36,7 @@ def login_view(request):
 VALID_USERNAME = 'admin'
 VALID_PASSWORD = 'solon@123'
 
+@csrf_protect
 def login1_view(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
@@ -57,6 +60,7 @@ def login1_view(request):
 #         return view_func(request, *args, **kwargs)
 #     return wrapper
 
+@csrf_protect
 def signup_view(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
