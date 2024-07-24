@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'demoapp',
 ]
 
+
+WKHTMLTOPDF_CMD = '/path/to/wkhtmltopdf'
+CSRF_TRUSTED_ORIGINS = ['https://dgrapp-prod.azurewebsites.net']
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -48,6 +51,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    ]
+CSRF_TRUSTED_ORIGINS = [
+    'https://dgrapp-prod.azurewebsites.net',
+]
+ALLOWED_HOSTS = ['dgrapp-prod.azurewebsites.net']
 ]
 
 ROOT_URLCONF = 'demodjango.urls'
