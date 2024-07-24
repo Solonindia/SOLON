@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Right Buttons</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .background {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            width: 100%;
+            height: 80%;
+            background-image: url('/static/Images/solar8.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            background-color: white;
+            filter: blur(2px); /* Apply blur effect */
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+        }
+
+        .logo img {
+            width: 100px;
+            height: auto;
+        }
+
+        .dgr-button {
+            position: absolute;
+            top: 200px; 
+            left: 200px;
+            border: 2px solid #007bff; /* Border color and width */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px; /* Space inside the border */
+            background-color: #f8f9fa; /* Background color for contrast */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional shadow for depth */
+            z-index: 1; /* Ensure the button is above other elements */
+        }
+
+        .dgr-button p {
+            margin: 0 0 10px 0; /* Space between paragraphs and the button */
+            font-size: 16px; /* Adjust text size */
+            color: #0c0341; /* Text color */
+        }
+
+        .button1,.button{
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: rgb(8, 8, 8);
+            background-color: #11d0f1;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .button1:hover {
+            background-color: #04055a;
+            color:aliceblue;
+        }
+        .button:hover {
+            background-color: #04055a;
+            color:aliceblue;
+        }
+
+        .complaint-button {
+            position: absolute;
+            top: 200px; 
+            right: 200px;
+            border: 2px solid #007bff; /* Border color and width */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px; /* Space inside the border */
+            background-color: #f8f9fa; /* Background color for contrast */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional shadow for depth */
+            z-index: 1; /* Ensure the button is above other elements */
+        }
+
+        .complaint-button p {
+            margin: 0 0 10px 0; /* Space between paragraphs and the button */
+            font-size: 16px; /* Adjust text size */
+            color: #0c0341; /* Text color */
+        }
+
+        .register-button, .logout-button {
+            position: absolute;
+            top: 20px; /* Distance from the top */
+            font-size: 20px; /* Adjust text size if needed */
+            z-index: 2; /* Ensure the text is above the background */
+        }
+
+        .register-button {
+            right: 120px; /* Adjust distance from the right for Register */
+        }
+
+        .logout-button {
+            right: 40px; /* Adjust distance from the right for Logout */
+        }
+
+        .register-button a, .logout-button a {
+            color: #007bff; /* Text color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .register-button a:hover, .logout-button a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        .bottom-left {
+            position: absolute;
+            bottom: 30px; /* Distance from the bottom */
+            left: 10px; /* Distance from the left */
+            z-index: 3; /* Ensure the link is above the background */
+        }
+    </style>    
+</head>
+<body>
+    <div class="background"></div>
+    <div class="logo">
+        <img src="/static/Images/logo.jpg" alt="Footer Image">
+    </div>
+    <div class="register-button">
+        <a href="{% url 'signup' %}">Register</a>
+    </div>
+    <div class="logout-button">
+        <a href="{% url 'home' %}">Logout</a>
+    </div>
+    <div class="dgr-button">
+        <p><b>Create an annual report</b><br> with summaries,<br> detailed monthly data,<br> and visualizations <br>(charts and graphs).</p>
+        <a href="{% url 'generate_word' %}" class="button1">DGR</a> 
+    </div>
+    <div class="complaint-button">
+        <p><b>Submit Your Complaint:</b><br>Register your site-related<br> issues by <br>writing your <br>complaint here.</p>
+        <a href="{% url 'complaint_form' %}" class="button">Complaint</a> 
+    </div>
+    <div class="bottom-left">
+        <a href="{% url 'home' %}"><b>Go to Home</b></a>
+    </div>
+</body>
+</html>
