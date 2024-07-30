@@ -74,7 +74,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'demodjango.wsgi.application'
-
+CSRF_TRUSTED_ORIGINS = ['https://dgrapp-prod.azurewebsites.net']
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
