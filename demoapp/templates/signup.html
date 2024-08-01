@@ -16,7 +16,6 @@
             text-align: center;
 
         }
-
         .background {
             position: absolute;
             top: 10%;
@@ -31,19 +30,16 @@
             background-color: white;
             filter: blur(2px); 
         }
-
         .logo {
             position: absolute;
             top: 10px;
             left: 10px;
             z-index: 2;
         }
-
         .logo img {
             width: 100px;
             height: auto;
         }
-
         .signup-container {
             width: 90%; /* Adjust width to make it more responsive */
             max-width: 400px;
@@ -95,6 +91,12 @@
             left: 10px; /* Distance from the left */
             z-index: 3; /* Ensure the link is above the background */
         }
+        .bottom-right {
+            position: absolute;
+            bottom: 30px; /* Distance from the bottom */
+            left: 70px; /* Distance from the left */
+            z-index: 3; /* Ensure the link is above the background */
+        }
     </style>
 </head>
 <body>
@@ -110,8 +112,10 @@
         </form>
     </div>
     <div class="bottom-left">
-        <a href="{% url 'home' %}"><b>Go to Home</b></a>
+        <a href="{% url 'home' %}"><b>Home</b></a>
     </div>
-    
+    <div class="bottom-right">
+        <a href="{% url 'admin' %}"><b>Dashboard</b></a>
+    </div>
 </body>
 </html>
