@@ -11,5 +11,6 @@ urlpatterns = [
     path('superuser/services/', views.admin_page, name='admin'),
     path('user/services/', views.user_page, name='user'),
     path('user/complaint/', views.complaint_form, name='complaint_form'),
-    path('user/DGR/', views.generate_word, name='generate_word'),
+    path('user/DGR/', views.generate_word1, name='generate_word'),
+    path('admin/DGR/', views.generate_word, name='generate_word1'),
 ]
